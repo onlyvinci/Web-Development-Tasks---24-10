@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MARTIN DONDAPATI</title>
+  
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #0b0c10;
+      color: #e5e7eb;
+      font-family: 'Barlow Condensed', sans-serif;
+      letter-spacing: 0.05em;
+      line-height: 1.4;
+      padding: 0 1.25rem;
+    }
+
+    .container {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 3.5rem 0 4rem;
+    }
+
+    
+    header {
+      border-bottom: 1px solid #1f242d;
+      padding-bottom: 2rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .tag {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.75rem;
+      color: #71717a;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      margin-bottom: 0.5rem;
+    }
+
+    h1 {
+      font-size: 3.25rem;
+      font-weight: 800;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: #ffffff;
+      line-height: 1;
+    }
+
+    .subtitle {
+      font-size: 1.15rem;
+      font-weight: 600;
+      color: #a1a1aa;
+      text-transform: uppercase;
+      margin-top: 0.6rem;
+      letter-spacing: 0.08em;
+    }
+
+    
+    section {
+      margin-bottom: 2.5rem;
+    }
+
+    h2 {
+      font-size: 1.35rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #ffffff;
+      margin-bottom: 0.9rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    h2::after {
+      content: "";
+      flex: 1;
+      height: 1px;
+      background-color: #1f242d;
+    }
+
+    
+    .card {
+      background-color: #12151b;
+      border: 1px solid #222733;
+      padding: 1.1rem 1.25rem;
+      border-radius: 4px;
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.85rem;
+    }
+
+    .item-title {
+      font-size: 1.15rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: #ffffff;
+      letter-spacing: 0.06em;
+    }
+
+    .item-sub {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.8rem;
+      color: #94a3b8;
+      margin-top: 0.25rem;
+    }
+
+    
+    .skills-wrap {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .skill-chip {
+      background-color: #12151b;
+      border: 1px solid #262c3a;
+      padding: 0.45rem 0.9rem;
+      font-size: 0.95rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      color: #f1f5f9;
+      letter-spacing: 0.08em;
+      border-radius: 3px;
+    }
+
+    
+    .form-box {
+      background-color: #12151b;
+      border: 1px solid #222733;
+      padding: 1.25rem;
+      border-radius: 4px;
+    }
+
+    .form-group {
+      margin-bottom: 0.85rem;
+    }
+
+    label {
+      display: block;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      color: #71717a;
+      margin-bottom: 0.3rem;
+      letter-spacing: 0.08em;
+    }
+
+    input, textarea {
+      width: 100%;
+      background-color: #0b0c10;
+      border: 1px solid #222733;
+      color: #ffffff;
+      font-family: inherit;
+      font-size: 1rem;
+      padding: 0.6rem 0.8rem;
+      border-radius: 3px;
+      outline: none;
+    }
+
+    input:focus, textarea:focus {
+      border-color: #475569;
+    }
+
+    button {
+      background-color: #ffffff;
+      color: #000000;
+      border: none;
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 1.05rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 0.6rem 1.4rem;
+      border-radius: 3px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #d4d4d8;
+    }
+
+    
+    .contact-row {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-bottom: 1.25rem;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.85rem;
+    }
+
+    .contact-item {
+      color: #cbd5e1;
+    }
+
+    .contact-item strong {
+      color: #71717a;
+      text-transform: uppercase;
+      font-size: 0.75rem;
+      display: block;
+    }
+
+    
+    footer {
+      border-top: 1px solid #1f242d;
+      padding-top: 1.5rem;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.75rem;
+      color: #52525b;
+      text-align: center;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+    }
+
+    @media (max-width: 600px) {
+      h1 { font-size: 2.5rem; }
+      .grid-2 { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+
+    
+    <header>
+      <div class="tag">Academic Portfolio // Task 01</div>
+      <h1>MARTIN DONDAPATI</h1>
+      <p class="subtitle">Student • B.Tech CSE (Data Science)</p>
+    </header>
+
+    
+    <section>
+      <h2>Education</h2>
+      <div class="card">
+        <div class="item-title">NRI Deemed to be University</div>
+        <div class="item-sub">Agiripalli, Andhra Pradesh</div>
+        <div class="item-sub" style="color: #ffffff; margin-top: 0.4rem;">Batch 2026 • Semester 1</div>
+      </div>
+    </section>
+
+    
+    <section>
+      <h2>Technical Skills</h2>
+      <div class="skills-wrap">
+        <div class="skill-chip">HTML</div>
+        <div class="skill-chip">CSS</div>
+        <div class="skill-chip">Python (Learner)</div>
+      </div>
+    </section>
+
+    
+    <section>
+      <h2>Projects</h2>
+      <div class="grid-2">
+        <div class="card">
+          <div class="item-title">Student Academic Dashboard</div>
+          <div class="item-sub">Stack: HTML, CSS, JavaScript</div>
+        </div>
+        <div class="card">
+          <div class="item-title">Bakery & Cake Shop Website</div>
+          <div class="item-sub">Stack: HTML, Internal CSS</div>
+        </div>
+      </div>
+    </section>
+
+    
+    <section>
+      <h2>Interests</h2>
+      <div class="grid-2">
+        <div class="card">
+          <div class="item-title">Pianist</div>
+          <div class="item-sub">Acoustic & Keyboard</div>
+        </div>
+        <div class="card">
+          <div class="item-title">Guitarist</div>
+          <div class="item-sub">Acoustic & Rhythm</div>
+        </div>
+      </div>
+    </section>
+
+    
+    <section>
+      <h2>Contact</h2>
+      
+      <div class="contact-row">
+        <div class="contact-item">
+          <strong>Email</strong>
+          info@email.com
+        </div>
+        <div class="contact-item">
+          <strong>Phone</strong>
+          +91 00000000
+        </div>
+        <div class="contact-item">
+          <strong>Location</strong>
+          Agiripalli / Vijayawada
+        </div>
+      </div>
+
+      <div class="form-box">
+        <form onsubmit="event.preventDefault(); alert('Message sent!'); this.reset();">
+          <div class="grid-2" style="margin-bottom: 0.85rem;">
+            <div>
+              <label for="name">Name</label>
+              <input type="text" id="name" placeholder="Your name" required />
+            </div>
+            <div>
+              <label for="email">Email</label>
+              <input type="email" id="email" placeholder="Your email" required />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" rows="3" placeholder="Write message..." required></textarea>
+          </div>
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+    </section>
+
+    
+    <footer>
+      Martin Dondapati • NRI Deemed to be University • 2026
+    </footer>
+
+  </div>
+
+</body>
+</html>
