@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>MARTIN DONDAPATI</title>
   
-  
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
@@ -32,7 +31,6 @@
       padding: 3.5rem 0 4rem;
     }
 
-    
     header {
       border-bottom: 1px solid #1f242d;
       padding-bottom: 2rem;
@@ -66,7 +64,6 @@
       letter-spacing: 0.08em;
     }
 
-    
     section {
       margin-bottom: 2.5rem;
     }
@@ -90,7 +87,6 @@
       background-color: #1f242d;
     }
 
-    
     .card {
       background-color: #12151b;
       border: 1px solid #222733;
@@ -119,7 +115,6 @@
       margin-top: 0.25rem;
     }
 
-    
     .skills-wrap {
       display: flex;
       flex-wrap: wrap;
@@ -138,7 +133,6 @@
       border-radius: 3px;
     }
 
-    
     .form-box {
       background-color: #12151b;
       border: 1px solid #222733;
@@ -194,7 +188,6 @@
       background-color: #d4d4d8;
     }
 
-    
     .contact-row {
       display: flex;
       justify-content: space-between;
@@ -216,7 +209,6 @@
       display: block;
     }
 
-    
     footer {
       border-top: 1px solid #1f242d;
       padding-top: 1.5rem;
@@ -238,14 +230,12 @@
 
   <div class="container">
 
-    
     <header>
       <div class="tag">Academic Portfolio // Task 01</div>
       <h1>MARTIN DONDAPATI</h1>
       <p class="subtitle">Student • B.Tech CSE (Data Science)</p>
     </header>
 
-    
     <section>
       <h2>Education</h2>
       <div class="card">
@@ -255,7 +245,6 @@
       </div>
     </section>
 
-    
     <section>
       <h2>Technical Skills</h2>
       <div class="skills-wrap">
@@ -265,13 +254,12 @@
       </div>
     </section>
 
-    
     <section>
       <h2>Projects</h2>
       <div class="grid-2">
         <div class="card">
           <div class="item-title">Student Academic Dashboard</div>
-          <div class="item-sub">Stack: HTML, CSS, JavaScript</div>
+          <div class="item-sub">Stack: HTML, CSS</div>
         </div>
         <div class="card">
           <div class="item-title">Bakery & Cake Shop Website</div>
@@ -280,7 +268,6 @@
       </div>
     </section>
 
-    
     <section>
       <h2>Interests</h2>
       <div class="grid-2">
@@ -295,7 +282,6 @@
       </div>
     </section>
 
-    
     <section>
       <h2>Contact</h2>
       
@@ -315,27 +301,26 @@
       </div>
 
       <div class="form-box">
-        <form onsubmit="event.preventDefault(); alert('Message sent!'); this.reset();">
+        <form action="#" method="post">
           <div class="grid-2" style="margin-bottom: 0.85rem;">
             <div>
               <label for="name">Name</label>
-              <input type="text" id="name" placeholder="Your name" required />
+              <input type="text" id="name" name="name" placeholder="Your name" required />
             </div>
             <div>
               <label for="email">Email</label>
-              <input type="email" id="email" placeholder="Your email" required />
+              <input type="email" id="email" name="email" placeholder="Your email" required />
             </div>
           </div>
           <div class="form-group">
             <label for="message">Message</label>
-            <textarea id="message" rows="3" placeholder="Write message..." required></textarea>
+            <textarea id="message" name="message" rows="3" placeholder="Write message..." required></textarea>
           </div>
           <button type="submit">Submit</button>
         </form>
       </div>
     </section>
 
-    
     <footer>
       Martin Dondapati • NRI Deemed to be University • 2026
     </footer>
