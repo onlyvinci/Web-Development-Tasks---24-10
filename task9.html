@@ -18,7 +18,6 @@
       line-height: 1.5;
     }
 
-    
     header {
       background-color: #ffffff;
       border-bottom: 1px solid #ebdcd5;
@@ -52,7 +51,6 @@
       color: #c84b60;
     }
 
-    
     .hero {
       background: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)), 
                   url('https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=1100&q=80') center/cover no-repeat;
@@ -85,7 +83,6 @@
       font-size: 13px;
     }
 
-    
     .container {
       max-width: 1000px;
       margin: 35px auto;
@@ -107,7 +104,6 @@
       font-size: 13px;
     }
 
-    
     .offer-banner {
       background: #ffeef2;
       border: 1px dashed #c84b60;
@@ -119,7 +115,6 @@
       color: #a43346;
     }
 
-    
     .grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -173,10 +168,11 @@
       padding: 6px 12px;
       border-radius: 4px;
       font-size: 12px;
+      text-decoration: none;
+      display: inline-block;
       cursor: pointer;
     }
 
-    
     .form-wrapper {
       background: white;
       border: 1px solid #ebdcd5;
@@ -207,6 +203,24 @@
       font-size: 13px;
     }
 
+    .message-field {
+      margin-bottom: 12px;
+    }
+
+    .message-field label {
+      display: block;
+      font-size: 13px;
+      font-weight: bold;
+      margin-bottom: 4px;
+    }
+
+    .message-field input {
+      width: 100%;
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
     .submit-button {
       background: #c84b60;
       color: white;
@@ -219,7 +233,6 @@
       margin-top: 10px;
     }
 
-    
     .contact-info {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -294,12 +307,11 @@
           <p>Chocolate ganache layers with moist sponge.</p>
           <div class="card-bottom">
             <span class="price">₹550</span>
-            <button class="btn" onclick="alert('Order placed!')">Buy</button>
+            <a href="#custom" class="btn">Buy</a>
           </div>
         </div>
       </div>
 
-      
       <div class="card">
         <img src="https://images.unsplash.com/photo-1563805042-7684c019e1cb?w=400&q=80" alt="Ice Cream">
         <div class="card-content">
@@ -307,12 +319,11 @@
           <p>Strawberry scoops tossed with fresh berry syrup.</p>
           <div class="card-bottom">
             <span class="price">₹190</span>
-            <button class="btn" onclick="alert('Order placed!')">Buy</button>
+            <a href="#custom" class="btn">Buy</a>
           </div>
         </div>
       </div>
 
-      
       <div class="card">
         <img src="https://images.unsplash.com/photo-1588195538326-c5b1e9f80a1b?w=400&q=80" alt="Red Velvet">
         <div class="card-content">
@@ -320,12 +331,11 @@
           <p>Vanilla cream cheese topped on soft cocoa pastry.</p>
           <div class="card-bottom">
             <span class="price">₹120</span>
-            <button class="btn" onclick="alert('Order placed!')">Buy</button>
+            <a href="#custom" class="btn">Buy</a>
           </div>
         </div>
       </div>
 
-      
       <div class="card">
         <img src="https://images.unsplash.com/photo-1499636136210-6f4ee915583e?w=400&q=80" alt="Cookies">
         <div class="card-content">
@@ -333,35 +343,35 @@
           <p>Fresh baked oven cookies with dark choco chips.</p>
           <div class="card-bottom">
             <span class="price">₹150</span>
-            <button class="btn" onclick="alert('Order placed!')">Buy</button>
+            <a href="#custom" class="btn">Buy</a>
           </div>
         </div>
       </div>
+
     </div>
 
-    
     <div class="form-wrapper" id="custom">
       <div class="section-head" style="margin-bottom: 16px;">
         <h2>Custom Cake Order</h2>
         <p>Book a design for birthdays or special days</p>
       </div>
 
-      <form onsubmit="event.preventDefault(); alert('Request submitted!');">
+      <form action="#" method="post">
         <div class="form-row">
           <div class="form-col">
-            <label>Name</label>
-            <input type="text" placeholder="Your Name" required>
+            <label for="customer-name">Name</label>
+            <input type="text" id="customer-name" name="customer-name" placeholder="Your Name" required>
           </div>
           <div class="form-col">
-            <label>Contact Number</label>
-            <input type="tel" placeholder="Phone Number" required>
+            <label for="customer-phone">Contact Number</label>
+            <input type="tel" id="customer-phone" name="customer-phone" placeholder="Phone Number" required>
           </div>
         </div>
 
         <div class="form-row">
           <div class="form-col">
-            <label>Cake Flavor</label>
-            <select>
+            <label for="cake-flavor">Cake Flavor</label>
+            <select id="cake-flavor" name="cake-flavor">
               <option>Chocolate Truffle</option>
               <option>Fresh Strawberry</option>
               <option>Butterscotch</option>
@@ -369,8 +379,8 @@
             </select>
           </div>
           <div class="form-col">
-            <label>Weight</label>
-            <select>
+            <label for="cake-weight">Weight</label>
+            <select id="cake-weight" name="cake-weight">
               <option>0.5 kg (₹450)</option>
               <option>1.0 kg (₹800)</option>
               <option>1.5 kg (₹1200)</option>
@@ -378,16 +388,15 @@
           </div>
         </div>
 
-        <div style="margin-bottom: 12px;">
-          <label style="display:block; font-size:13px; font-weight:bold; margin-bottom:4px;">Message on Cake</label>
-          <input type="text" placeholder="Text to write on cake" style="width:100%; padding:8px; border:1px solid #ccc; border-radius:4px;">
+        <div class="message-field">
+          <label for="cake-msg">Message on Cake</label>
+          <input type="text" id="cake-msg" name="cake-msg" placeholder="Text to write on cake">
         </div>
 
         <button type="submit" class="submit-button">Submit Cake Request</button>
       </form>
     </div>
 
-    
     <div class="contact-info" id="contact">
       <div class="info-box">
         <h4>Store Timings</h4>
